@@ -94,6 +94,8 @@ export default class Kernel extends CustEvent {
 		if(!this.videokernel) {
 			return Log.error(this.tag, 'videokernel is not already, must init player');
 		}
+
+		this.videokernel.attachMedia();
 	}
 	/**
 	 * load source
