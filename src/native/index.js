@@ -20,14 +20,15 @@ export default class NativeVideoKernel extends CustEvent {
     this.video.setAttribute('src', src);
   }
 
-  unload() {
+  // https://developer.mozilla.org/de/docs/Web/HTML/Using_HTML5_audio_and_video#Stopping_the_download_of_media
+  stopLoad() {
     this.video.src = '';
     this.video.removeAttribute('src');
   }
 
   destroy() {
     /* istanbul ignore next  */
-    if (isElement(this.video)) this.unload();
+    if (isElement(this.video)) this.stopLoad();
   }
 
   play() {

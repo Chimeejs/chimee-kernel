@@ -130,6 +130,11 @@ export default class ChimeeKernel extends CustEvent {
     this.videoKernel.load(src);
   }
 
+  stopLoad() {
+    /* istanbul ignore else */
+    if (isFunction(this.videoKernel.stopLoad)) this.videoKernel.stopLoad();
+  }
+
   play() {
     this.videoKernel.play();
   }

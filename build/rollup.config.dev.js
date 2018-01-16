@@ -13,7 +13,6 @@ config.plugins.push(
     contentBase: '',
     historyApiFallback: false,
     host: 'localhost',
-    port: 10002,
   }),
   livereload()
 );
