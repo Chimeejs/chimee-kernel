@@ -18,7 +18,7 @@ export default class ChimeeKernel extends CustEvent {
   videoElement: HTMLVideoElement;
   videoKernel: VideoKernel;
   VERSION: string;
-  VERSION = process.env.KERNEL_VERSION;
+  VERSION = process.env.VERSION;
   /**
 	 * kernelWrapper
 	 * @param {any} wrap videoElement
