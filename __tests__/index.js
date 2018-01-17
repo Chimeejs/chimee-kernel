@@ -125,10 +125,27 @@ describe('chimee-kernel index.js', () => {
     });
 
     test('stopLoad', () => {
-      videoElement.src = 'http://cdn.toxicjohann.com/lostStar.mp4';
+      kernel.load();
       expect(videoElement.src).toBe('http://cdn.toxicjohann.com/lostStar.mp4');
+      kernel.seek(10);
+      expect(kernel.videoElement.currentTime).toBe(10);
+      expect(kernel.currentTime).toBe(10);
       kernel.stopLoad();
       expect(videoElement.src).toBe('');
+    });
+
+    test('startLoad', () => {
+      kernel.load();
+      expect(videoElement.src).toBe('http://cdn.toxicjohann.com/lostStar.mp4');
+      kernel.seek(10);
+      expect(kernel.videoElement.currentTime).toBe(10);
+      expect(kernel.currentTime).toBe(10);
+      kernel.stopLoad();
+      expect(videoElement.src).toBe('');
+      kernel.startLoad();
+      expect(videoElement.src).toBe('http://cdn.toxicjohann.com/lostStar.mp4');
+      expect(kernel.videoElement.currentTime).toBe(10);
+      expect(kernel.currentTime).toBe(10);
     });
 
     test('event listener', () => {
