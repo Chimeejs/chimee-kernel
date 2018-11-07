@@ -1,5 +1,7 @@
 # [DEPRECATED] chimee-kernel has been merged into chimee.
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Chimeejs/chimee-kernel.svg)](https://greenkeeper.io/)
+
 # chimee-kernel
 
 Chimee-kernel is a manger of video decoder.
